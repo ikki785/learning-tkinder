@@ -1,32 +1,47 @@
 from tkinter import *
-wind = Tk()
-wind.geometry("1080x1080")
-wind.title("tkinder")
-wind.config(background='black')
-c = 0
-def click():
-    global c
-    c += 1
-    text1.config(text = c)
-text1 = Label(wind,
-              text = c,
-              fg = 'red',
-              relief=RAISED,
-              padx= 3,
-              width=5,
-              height=2)
 
-bu1 = Button(wind,
-             text="click me",
-             bg = "#1500ff",
-             width=10,
-             height=5,
-             padx=20,
-             command=click
-             )
+w = Tk()
+w.title("suman")
+w.geometry("1080x1080")
+w.config(background="#faf9f7")
+def info1 ():
+    name = na.get()
+    email = na1.get()
+pa = Label(w,text = "enter your name",
+           fg = "black",
+           bg = "#cfc7c5",
+           pady=3,
+           padx=3,
+           width=20)
+na = Entry()
+na.config(relief = SUNKEN,
+          fg = "black",
+          bg = "#faf9f7",
+          width=20,
+          )
 
-bu1.config(activebackground='red')
+
+pa1 = Label(w,text = "enter your email",
+           fg = "black", 
+           bg= "#cfc7c5",
+           pady=3,
+           padx=3,
+           width=20)
+na1 = Entry()
+na1.config(relief=SUNKEN,
+          fg = "black",
+          bg = "#faf9f7",
+          width=20)
+bu1 = Button(w,
+             text= "next",
+             bg = "#1f21b5",
+             command=info1)
+
+pa.pack()
+na.pack()
+pa1.pack()
+na1.pack()
+bu1.pack(pady=70)
 bu1.pack()
 
-text1.pack()
-wind.mainloop()
+w.mainloop()
