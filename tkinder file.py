@@ -8,5 +8,10 @@ text1 = Label(wind,
               fg = 'red',
               relief=RAISED,
               padx= 4)
-text1.pack()
+bu1 = Button(wind,
+             text="click me",
+             width=10,
+             height=5,
+             padx= 20)
+bu1.pack()
 wind.mainloop()
