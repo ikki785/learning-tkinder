@@ -3,13 +3,18 @@ wind = Tk()
 wind.geometry("1080x1080")
 wind.title("tkinder")
 wind.config(background='black')
+c = 0
 def click():
-    print("hello")
+    global c
+    c += 1
+    text1.config(text = c)
 text1 = Label(wind,
-              text="hello",
+              text = c,
               fg = 'red',
               relief=RAISED,
-              padx= 4)
+              padx= 3,
+              width=5,
+              height=2)
 
 bu1 = Button(wind,
              text="click me",
@@ -17,11 +22,11 @@ bu1 = Button(wind,
              width=10,
              height=5,
              padx=20,
-             
+             command=click
              )
 
 bu1.config(activebackground='red')
 bu1.pack()
-bu1.bind("<Button-1>", lambda e: click())
 
+text1.pack()
 wind.mainloop()
