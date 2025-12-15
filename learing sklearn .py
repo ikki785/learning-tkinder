@@ -16,5 +16,6 @@ all_sales = y + list(future_sales)
 
 plt.bar(all_years, all_sales)
 
-plt.title("prediced sales")
+plt.title("prediced sales",color= "red")
+plt.grid()
 plt.show()
